@@ -7,15 +7,131 @@
     tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
-        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay"
+        >
 
         <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
             android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:elevation="4dp"/>
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize"
+        >
+        <android.support.v7.widget.GridLayout
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:background="@android:color/white"
+            app:columnCount="2">
+
+            //space take additional space(height) when all the layout complete
+            <android.support.v7.widget.Space
+                app:layout_columnSpan="2"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"/>
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                app:layout_columnSpan="2"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal"
+                android:text="testing 1"/>
+            <TextView
+                android:id="@+id/textview2"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal"
+                android:text="testing 1"/>
+            <TextView
+                android:id="@+id/textview3"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal"
+                android:text="testing 1"/>
+            <android.support.v7.widget.Space
+                app:layout_columnSpan="2"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"/>
+
+        </android.support.v7.widget.GridLayout>
+
+        <android.support.v7.widget.GridLayout
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:background="@android:color/white"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            app:columnCount="2">
+
+            <android.support.v7.widget.Space
+                app:layout_columnSpan="2"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"/>
+            <TextView
+                android:id="@+id/textview4"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                app:layout_columnWeight="2"
+                app:layout_rowWeight="1"
+                app:layout_gravity="fill"
+                android:text="testing 1"/>
+            <TextView
+                android:id="@+id/textview5"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                android:text="testing 1"/>
+            <TextView
+                android:id="@+id/textview6"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                app:layout_rowWeight="1"
+                app:layout_gravity="fill"
+                android:text="testing 1"/>
+            <TextView
+                android:id="@+id/textview7"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                app:layout_gravity="fill"
+                android:text="testing 1"/>
+            <android.support.v7.widget.Space
+                app:layout_columnSpan="2"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"/>
+
+        </android.support.v7.widget.GridLayout>
+    </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
